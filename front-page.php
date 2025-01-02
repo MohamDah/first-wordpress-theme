@@ -261,10 +261,10 @@
                 <p>"Thanks to RANI Construction Company, we now
                     live in our dream home. The process was smooth,
                     and the results exceeded our expectations." </p>
-                
+
                 <p class="font-bold">[Client Name]</p>
                 <img src="https://media-public.canva.com/msqN0/MAEnZdmsqN0/1/t.png" alt=""
-                class="w-8">
+                    class="w-8">
                 <p>Watch Story</p>
             </div>
         </div>
@@ -275,10 +275,10 @@
                 <p>"Thanks to RANI Construction Company, we now
                     live in our dream home. The process was smooth,
                     and the results exceeded our expectations." </p>
-                
+
                 <p class="font-bold">[Client Name]</p>
                 <img src="https://media-public.canva.com/msqN0/MAEnZdmsqN0/1/t.png" alt=""
-                class="w-8">
+                    class="w-8">
                 <p>Watch Story</p>
             </div>
         </div>
@@ -289,10 +289,10 @@
                 <p>"Thanks to RANI Construction Company, we now
                     live in our dream home. The process was smooth,
                     and the results exceeded our expectations." </p>
-                
+
                 <p class="font-bold">[Client Name]</p>
                 <img src="https://media-public.canva.com/msqN0/MAEnZdmsqN0/1/t.png" alt=""
-                class="w-8">
+                    class="w-8">
                 <p>Watch Story</p>
             </div>
         </div>
@@ -303,10 +303,10 @@
                 <p>"Thanks to RANI Construction Company, we now
                     live in our dream home. The process was smooth,
                     and the results exceeded our expectations." </p>
-                
+
                 <p class="font-bold">[Client Name]</p>
                 <img src="https://media-public.canva.com/msqN0/MAEnZdmsqN0/1/t.png" alt=""
-                class="w-8">
+                    class="w-8">
                 <p>Watch Story</p>
             </div>
         </div>
@@ -317,10 +317,10 @@
                 <p>"Thanks to RANI Construction Company, we now
                     live in our dream home. The process was smooth,
                     and the results exceeded our expectations." </p>
-                
+
                 <p class="font-bold">[Client Name]</p>
                 <img src="https://media-public.canva.com/msqN0/MAEnZdmsqN0/1/t.png" alt=""
-                class="w-8">
+                    class="w-8">
                 <p>Watch Story</p>
             </div>
         </div>
@@ -331,18 +331,36 @@
                 <p>"Thanks to RANI Construction Company, we now
                     live in our dream home. The process was smooth,
                     and the results exceeded our expectations." </p>
-                
+
                 <p class="font-bold">[Client Name]</p>
                 <img src="https://media-public.canva.com/msqN0/MAEnZdmsqN0/1/t.png" alt=""
-                class="w-8">
+                    class="w-8">
                 <p>Watch Story</p>
             </div>
         </div>
     </div>
 </section>
 
-<section>
-    
+<section class="bg-black text-white mx-16 mt-16 p-16">
+    <h1 class="text-center text-4xl font-bold">Areas we cover</h1>
+
+    <div class="grid grid-cols-3 text-center mt-20 gap-6">
+        <div class="border border-white border-opacity-25 rounded-xl px-16 pb-10">
+            <i class="fa-solid fa-location-dot bg-white text-black w-20 h-20 text-5xl flex justify-center items-center mx-auto rounded-full -mt-10"></i>
+            <h2 class="text-2xl font-bold mt-6">Princeton, New Jersey</h2>
+            <p class="mt-4">Explore Princeton's rich history and vibrant community, where we provide top-notch local services.</p>
+        </div>
+        <div class="border border-white border-opacity-25 rounded-xl px-16 pb-10">
+            <i class="fa-solid fa-location-dot bg-white text-black w-20 h-20 text-5xl flex justify-center items-center mx-auto rounded-full -mt-10"></i>
+            <h2 class="text-2xl font-bold mt-6">Princeton, New Jersey</h2>
+            <p class="mt-4">Explore Princeton's rich history and vibrant community, where we provide top-notch local services.</p>
+        </div>
+        <div class="border border-white border-opacity-25 rounded-xl px-16 pb-10">
+            <i class="fa-solid fa-location-dot bg-white text-black w-20 h-20 text-5xl flex justify-center items-center mx-auto rounded-full -mt-10"></i>
+            <h2 class="text-2xl font-bold mt-6">Princeton, New Jersey</h2>
+            <p class="mt-4">Explore Princeton's rich history and vibrant community, where we provide top-notch local services.</p>
+        </div>
+    </div>
 </section>
 
 

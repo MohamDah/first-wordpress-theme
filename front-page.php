@@ -18,59 +18,39 @@
                     class="h-full">
                 <h2 class="text-3xl"><?php echo $hero["rating_text"]; ?></h2>
             </div>
-            <h1 class="text-7xl leading-[7rem]">
-                <?php echo $hero["main_title"] ?>
+
+
+            <h1 class="text-7xl leading-[6rem]">
+                <?php echo get_theme_mod("hero-title") ?>
             </h1>
-            <h2 class="text-3xl">We help you;</h2>
+            <h2 class="text-4xl">We help you;</h2>
             <div class="mt-4 grid grid-cols-2 w-full justify-start pl-[5%] gap-y-5 gap-x-24">
 
-                <?php if (!($hero["we_help_you"]["help_1"] == "")): ?>
-                    <div class="flex h-12 items-end">
-                        <img src="https://media-public.canva.com/tg5-4/MAF5r0tg5-4/1/t.png" alt="checkmark"
-                            class="h-full">
-                        <h2 class="text-3xl font-bold">
-                            <?php echo $hero["we_help_you"]["help_1"] ?>
-                        </h2>
-                    </div>
-                <?php endif; ?>
-
-                <?php if (!($hero["we_help_you"]["help_2"] == "")): ?>
-                    <div class="flex h-12 items-end">
-                        <img src="https://media-public.canva.com/tg5-4/MAF5r0tg5-4/1/t.png" alt="checkmark"
-                            class="h-full">
-                        <h2 class="text-3xl font-bold">
-                            <?php echo $hero["we_help_you"]["help_2"] ?>
-                        </h2>
-                    </div>
-                <?php endif; ?>
-
-                <?php if (!($hero["we_help_you"]["help_3"] == "")): ?>
-                    <div class="flex h-12 items-end">
-                        <img src="https://media-public.canva.com/tg5-4/MAF5r0tg5-4/1/t.png" alt="checkmark"
-                            class="h-full">
-                        <h2 class="text-3xl font-bold">
-                            <?php echo $hero["we_help_you"]["help_3"] ?>
-                        </h2>
-                    </div>
-                <?php endif; ?>
 
 
-                <?php if (!($hero["we_help_you"]["help_4"] == "")): ?>
-                    <div class="flex h-12 items-end">
-                        <img src="https://media-public.canva.com/tg5-4/MAF5r0tg5-4/1/t.png" alt="checkmark"
-                            class="h-full">
-                        <h2 class="text-3xl font-bold">
-                            <?php echo $hero["we_help_you"]["help_4"] ?>
-                        </h2>
-                    </div>
-                <?php endif; ?>
+                <?php
+                $helps = get_theme_mod('hero-help', array());
+
+                $helps_decoded = json_decode($helps);
+                
+                foreach ($helps_decoded as $check): if ($check->text): ?>
+
+                        <div class="flex h-12 items-end">
+                            <img src="https://media-public.canva.com/tg5-4/MAF5r0tg5-4/1/t.png" alt="checkmark"
+                                class="h-full">
+                            <h2 class="text-3xl font-bold">
+                                <?php echo $check->text; ?>
+                            </h2>
+                        </div>
+
+                <?php endif; endforeach; ?>
 
             </div>
         </div>
 
         <div class="bg-[#161616] h-[90%] border-8 border-white w-[30%] flex flex-col items-center py-2.5 px-8 gap-4 justify-center">
             <h2 class="text-4xl text-center font-bold">
-                <?php echo $hero["form_title"]; ?>
+                <?php echo get_theme_mod("hero-form-title"); ?>
             </h2>
             <form class="w-5/6 flex flex-col gap-2.5 justify-center">
                 <p class="text-lg font-bold text-center mb-1.5">Fill the form below to get started.</p>
@@ -93,18 +73,28 @@
 <section class="flex flex-col items-center w-full px-16 mt-12 gap-[60px]">
     <div class="h-[75px] bg-[#eeeeee] flex justify-center items-center w-full">
         <h2 class="text-[1.6rem] font-bold text-gray-900">
-            <span class="text-red-500">WE TAKE PRIDE</span>
-            IN EVERY JOB WE DO
+            <span class="text-red-500">
+                <?php echo get_theme_mod("service-title-red"); ?>
+            </span>
+            <?php echo get_theme_mod("service-title"); ?>
         </h2>
 
     </div>
     <div class="flex w-[1000px]  gap-12">
+
+    <?php  
+        
+    ?>
         <div class="bg-black text-white flex flex-col gap-6 pb-6 w-[340px]">
             <img src="<?php bloginfo("template_directory"); ?>/images/serviceImg.png" alt="roof working"
                 class="w-full">
             <h3 class="mx-6 text-xl text-[#AF4B04] font-bold">ROOFING</h3>
             <p class="mx-6">All the lorem ipsum generator on the internet tend to repeat predefined chunks</p>
         </div>
+
+
+
+
         <div class="bg-black text-white flex flex-col gap-6 pb-6 w-[340px]">
             <img src="<?php bloginfo("template_directory"); ?>/images/serviceImg.png" alt="roof working"
                 class="w-full">
@@ -341,7 +331,7 @@
     </div>
 </section>
 
-<section class="bg-black text-white mx-16 mt-16 p-16">
+<section class="bg-black text-white mx-16 mt-16 p-16 pb-36">
     <h1 class="text-center text-4xl font-bold">Areas we cover</h1>
 
     <div class="grid grid-cols-3 text-center mt-20 gap-6">
@@ -361,6 +351,14 @@
             <p class="mt-4">Explore Princeton's rich history and vibrant community, where we provide top-notch local services.</p>
         </div>
     </div>
+</section>
+
+<section class="mx-28 text-[#1C2E3A] text-center p-20 -mt-24 bg-white">
+    <h2 class="text-6xl font-extrabold ">Try ClickFunnels Today For Free And Witness The Awesomeness For Yourself</h2>
+
+    <button class="mt-12 h-36 bg-[#1DBCFE] w-[850px] text-5xl text-white font-bold rounded-lg">Start Your Free Trial Today <i class="fa-solid fa-angles-right"></i></button>
+
+    <p class="text-2xl font-medium text-gray-500 mt-4">Get Started In Less Than 60 Seconds • Cancel Anytime</p>
 </section>
 
 

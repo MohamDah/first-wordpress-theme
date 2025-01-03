@@ -17,16 +17,27 @@
 </head>
 
 <body class="font-mont">
+
+
     <header class="flex h-[6.25rem] border pr-5 justify-between">
-        <img src="<?php bloginfo("template_directory"); ?>/images/logo.webp" alt="logo" 
-        class="">
+
+        <img src="<?php echo wp_get_attachment_url(get_theme_mod("header-logo-image")) ?>" alt="logo"
+            class="">
 
         <div class="flex h-full items-center gap-2.5">
-            <p class="text-xl font-normal">Call for an instant estimate</p>
+            <!-- <p class="text-xl font-normal">Call for an instant estimate</p> -->
+
+            <?php $beforeNum = get_theme_mod("header-before-num");
+            if ($beforeNum): ?>
+                <p class="text-xl font-normal"><?php echo $beforeNum; ?></p>
+            <?php endif; ?>
+
+
             <div class="h-[65%] flex items-center bg-black text-white px-6 py-1.5 rounded-full gap-4">
-                <img src="<?php bloginfo("template_directory"); ?>/images/waicon.png" alt="whatsapp icon" 
-                class="h-full">
-                <p class="font-bold text-2xl">(+250) 780 900 900</p>
+                <img src="<?php bloginfo("template_directory"); ?>/images/waicon.png" alt="whatsapp icon"
+                    class="h-full">
+                <!-- <p class="font-bold text-2xl">(+250) 780 900 900</p> -->
+                <p class="font-bold text-2xl"><?php echo get_theme_mod("header-num"); ?></p>
             </div>
         </div>
-    </header>   
+    </header>
